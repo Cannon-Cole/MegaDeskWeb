@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk.Web">
+    <PropertyGroup>
+        <TargetFramework>netcoreapp2.1</TargetFramework>
+    </PropertyGroup>
+    <ItemGroup>
+        <PackageReference Include="Microsoft.AspNetCore.App" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="2.1.4" />
+        <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.5" />
+    </ItemGroup>
+    <ItemGroup>
+        <Folder Include="Models\" />
+    </ItemGroup>
+    <ItemGroup>
+        <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.1.0-preview1-final" />
+    </ItemGroup>
+    <ItemGroup>
+      <Compile Remove="Pages\Create.cshtml.cs" />
+      <Compile Remove="Pages\Delete.cshtml.cs" />
+      <Compile Remove="Pages\Details.cshtml.cs" />
+      <Compile Remove="Pages\About.cshtml.cs" />
+      <Compile Remove="Pages\Contact.cshtml.cs" />
+    </ItemGroup>
+    <ItemGroup>
+      <Content Remove="Pages\About.cshtml" />
+      <Content Remove="Pages\Contact.cshtml" />
+      <Content Remove="Pages\_ViewImports.cshtml" />
+      <Content Remove="Pages\_ViewStart.cshtml" />
+    </ItemGroup>
+</Project>
