@@ -33,6 +33,8 @@ namespace MegaDesk.Pages.DataManipulation
                 return Page();
             }
 
+            DeskQuote.Total = DeskQuoteCalculations.getPrice(DeskQuote.Depth, DeskQuote.Width, DeskQuote.Material, DeskQuote.Rush, DeskQuote.Drawers);
+
             _context.DeskQuote.Add(DeskQuote);
             await _context.SaveChangesAsync();
 

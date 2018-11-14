@@ -29,7 +29,8 @@ namespace MegaDesk.Pages.DataManipulation
             NameSort = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
             DateSort = sortOrder == "Date" ? "date_desc" : "Date";
 
-            CurrentFilter = searchString.ToLower();
+            if (!String.IsNullOrEmpty(searchString))
+                CurrentFilter = searchString.ToLower();
 
             IQueryable<DeskQuote> deskQuote = from s in _context.DeskQuote
                                               select s;
