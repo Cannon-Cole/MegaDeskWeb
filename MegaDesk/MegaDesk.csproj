@@ -12,9 +12,6 @@
         <Folder Include="Models\" />
     </ItemGroup>
     <ItemGroup>
-        <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.1.0-preview1-final" />
-    </ItemGroup>
-    <ItemGroup>
       <Compile Remove="Pages\Create.cshtml.cs" />
       <Compile Remove="Pages\Delete.cshtml.cs" />
       <Compile Remove="Pages\Details.cshtml.cs" />
@@ -24,7 +21,8 @@
     <ItemGroup>
       <Content Remove="Pages\About.cshtml" />
       <Content Remove="Pages\Contact.cshtml" />
-      <Content Remove="Pages\_ViewImports.cshtml" />
-      <Content Remove="Pages\_ViewStart.cshtml" />
+    </ItemGroup>
+    <ItemGroup>
+      <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.1.0-preview1-final" />
     </ItemGroup>
 </Project>
