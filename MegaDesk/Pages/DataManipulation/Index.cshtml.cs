@@ -18,11 +18,44 @@ namespace MegaDesk.Pages.DataManipulation
             _context = context;
         }
 
+        public string NameSort { get; set; }
+        public string DateSort { get; set; }
+        public string CurrentFilter { get; set; }
+
         public IList<DeskQuote> DeskQuote { get;set; }
 
-        public async Task OnGetAsync()
+        public async Task OnGetAsync(string sortOrder, string searchString)
         {
-            DeskQuote = await _context.DeskQuote.ToListAsync();
+            NameSort = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
+            DateSort = sortOrder == "Date" ? "date_desc" : "Date";
+
+            CurrentFilter = searchString.ToLower();
+
+            IQueryable<DeskQuote> deskQuote = from s in _context.DeskQuote
+                                              select s;
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                deskQuote = deskQuote.Where(s => s.Name.ToLower().Contains(searchString));
+            }
+
+            switch (sortOrder)
+            {
+                case "name_desc":
+                    deskQuote = deskQuote.OrderByDescending(s => s.Name);
+                    break;
+                case "Date":
+                    deskQuote = deskQuote.OrderBy(s => s.Date);
+                    break;
+                case "date_desc":
+                    deskQuote = deskQuote.OrderByDescending(s => s.Date);
+                    break;
+                default:
+                    deskQuote = deskQuote.OrderBy(s => s.Name);
+                    break;
+            }
+
+            DeskQuote = await deskQuote.AsNoTracking().ToListAsync();
         }
     }
 }

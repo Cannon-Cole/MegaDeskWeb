@@ -10,6 +10,18 @@
 <p>
     <a asp-page="Create">Create New</a>
 </p>
+
+<form asp-page="./Index" method="get">
+    <div class="form-actions no-color">
+        <p>
+            Find by name:
+            <input type="text" name="SearchString" value="@Model.CurrentFilter" />
+            <input type="submit" value="Search" class="btn btn-default" /> |
+            <a asp-page="./Index">Remove Name Filter</a>
+        </p>
+    </div>
+</form>
+
 <table class="table">
     <thead>
         <tr>
@@ -29,10 +41,14 @@
                 @Html.DisplayNameFor(model => model.DeskQuote[0].Rush)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.DeskQuote[0].Name)
+                <a asp-page="./Index" asp-route-sortOrder="@Model.NameSort">
+                    @Html.DisplayNameFor(model => model.DeskQuote[0].Name)
+                </a>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.DeskQuote[0].Date)
+                <a asp-page="./Index" asp-route-sortOrder="@Model.DateSort">
+                    @Html.DisplayNameFor(model => model.DeskQuote[0].Date)
+                </a>
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.DeskQuote[0].Total)
