@@ -56,3 +56,15 @@ input[type="date"] {
         display: none;
     }
 }
+
+.table td, .table th {
+  padding: 8px;
+}
+
+.table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.table tr:hover {
+  background-color: #ddd;
+}
