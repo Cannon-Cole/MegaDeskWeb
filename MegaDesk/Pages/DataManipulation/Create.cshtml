@@ -29,13 +29,20 @@
                 <span asp-validation-for="DeskQuote.Drawers" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="DeskQuote.Material" class="control-label"></label>
-                <input asp-for="DeskQuote.Material" class="form-control" />
+                <label asp-for="DeskQuote.Material" asp-items="Model.Genres" class="control-label"></label>
+             
+                <select asp-for="DeskQuote.Material" asp-items="new SelectList(Enum.GetNames(typeof(Desk.Materials)))" class="form-control">
+                </select>
                 <span asp-validation-for="DeskQuote.Material" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="DeskQuote.Rush" class="control-label"></label>
-                <input asp-for="DeskQuote.Rush" class="form-control" />
+                <select asp-for="DeskQuote.Rush" class="form-control">
+                  <option value="0">None</option>
+                  <option value="3">3 Day</option>
+                  <option value="5">5 Day</option>
+                  <option value="7">7 Day</option>
+                </select>
                 <span asp-validation-for="DeskQuote.Rush" class="text-danger"></span>
             </div>
             <div class="form-group">

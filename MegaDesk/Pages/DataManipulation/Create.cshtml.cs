@@ -38,7 +38,7 @@ namespace MegaDesk.Pages.DataManipulation
             _context.DeskQuote.Add(DeskQuote);
             await _context.SaveChangesAsync();
 
-            return RedirectToPage("./Index");
+            return RedirectToPage("./Details", new {id=DeskQuote.ID});
         }
     }
 }

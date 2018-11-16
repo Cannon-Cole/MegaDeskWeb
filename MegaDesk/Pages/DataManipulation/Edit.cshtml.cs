@@ -49,6 +49,7 @@ namespace MegaDesk.Pages.DataManipulation
 
             try
             {
+                DeskQuote.Total = DeskQuoteCalculations.getPrice(DeskQuote.Depth, DeskQuote.Width, DeskQuote.Material, DeskQuote.Rush, DeskQuote.Drawers);
                 await _context.SaveChangesAsync();
             }
             catch (DbUpdateConcurrencyException)
@@ -63,7 +64,7 @@ namespace MegaDesk.Pages.DataManipulation
                 }
             }
 
-            return RedirectToPage("./Index");
+            return RedirectToPage("./Details", new { id = DeskQuote.ID });
         }
 
         private bool DeskQuoteExists(int id)
