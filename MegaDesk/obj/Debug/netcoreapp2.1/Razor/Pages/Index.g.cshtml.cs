@@ -57,7 +57,7 @@ using MegaDesk;
             WriteLiteral("\r\n<div class=\"main-menu\">\r\n    ");
             EndContext();
             BeginContext(117, 67, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "d12b052d88944df4a808183a491ad41e", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "4b41aeebc7994b9a9d18216f59ffc3d4", async() => {
                 BeginContext(177, 3, true);
                 WriteLiteral("Add");
                 EndContext();
@@ -80,7 +80,7 @@ using MegaDesk;
             WriteLiteral("\r\n    ");
             EndContext();
             BeginContext(190, 71, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "0a84a22c731342fa81d1295292e516b6", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "0e776ce933af4d5698075b19ab160574", async() => {
                 BeginContext(249, 8, true);
                 WriteLiteral("View All");
                 EndContext();

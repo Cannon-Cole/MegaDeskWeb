@@ -11,14 +11,25 @@ body {
 /* Wrapping element */
 /* Set some basic padding to keep content from hitting the edges */
 .body-content {
-    padding-left: 15px;
-    padding-right: 15px;
+  font-family: 'Montserrat', sans-serif;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+#mainLink {
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.navbar-inverse {
+  background: #b17e4b;
+  border-color: #512e09;
 }
 
 /* Carousel */
 .carousel-caption p {
-    font-size: 20px;
-    line-height: 1.4;
+  font-size: 20px;
+  line-height: 1.4;
 }
 
 /* Make .svg files in the carousel display properly in older browsers */
@@ -42,15 +53,31 @@ input[type="date"] {
 }
 
 .link-button {
-    color: black;
-    padding: 75px 150px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    border: 2px solid lightgray;
-    border-radius: 6px;
-    margin-top: 1em;
+  color: black;
+  padding: 75px 150px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border: 2px solid #11d211;
+  border-radius: 6px;
+  margin-top: 1em;
+  font-size: 2rem;
+  transition: .2s;
 }
+
+  .link-button:hover {
+    text-decoration: none;
+    background: #11d211;
+    color: white;
+  }
+
+a, a:link, a:visited {
+  color: #11d211;
+}
+
+  a:hover, a:focus, a:active {
+    color: #0ea70e;
+  }
 
 /* Hide/rearrange for smaller screens */
 @media screen and (max-width: 767px) {
@@ -69,5 +96,18 @@ input[type="date"] {
 }
 
 .table tr:hover {
-  background-color: #ddd;
+  background-color: #e5d7c8;
+}
+
+input[type=submit] {
+  border: 2px solid #11d211;
+  color: white;
+  background: #11d211;
+  transition: .2s;
+}
+
+input[type=submit]:hover {
+  border: 2px solid #11d211;
+  color: #11d211;
+  background: white;
 }

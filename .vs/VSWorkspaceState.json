@@ -2,8 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\MegaDesk",
-    "\\MegaDesk\\Pages"
+    "\\MegaDesk\\wwwroot",
+    "\\MegaDesk\\wwwroot\\css"
   ],
-  "SelectedNode": "\\MegaDesk\\Pages",
+  "SelectedNode": "\\MegaDesk.sln",
   "PreviewInSolutionExplorer": false
 }
