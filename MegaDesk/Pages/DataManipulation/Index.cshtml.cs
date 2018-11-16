@@ -37,7 +37,7 @@ namespace MegaDesk.Pages.DataManipulation
 
             if (!String.IsNullOrEmpty(searchString))
             {
-                deskQuote = deskQuote.Where(s => s.Name.ToLower().Contains(searchString));
+                deskQuote = deskQuote.Where(s => s.Name.ToLower().Contains(searchString.ToLower()));
             }
 
             switch (sortOrder)
